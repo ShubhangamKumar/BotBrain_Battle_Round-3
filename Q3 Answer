@@ -1,0 +1,48 @@
+Primarily Work
+To develop an autonomous UAV drone system capable of operating with a flight controller and leveraging swarm technology for communication, the following steps are undertaken:
+
+1. UAV Design and Flight Controller Integration
+   i.Flight Controller Selection and Setup:
+     a.Choose a flight controller compatible with autonomous navigation and communication protocols (e.g., Pixhawk or Ardupilot).
+     b.Install the necessary firmware and configure the flight controller settings for autonomous operation.
+     c.Integrate sensors (LIDAR, color sensor) with the flight controller.
+
+2. Swarm Technology Implementation
+   i.Communication Protocols:
+     a.Develop or integrate a communication protocol for swarm technology, enabling inter-drone communication.
+     b.Use Wi-Fi modules (e.g., ESP8266) for wireless communication.
+     c.Implement data exchange routines to share location, status, and target information among drones.
+
+   ii.Swarm Coordination:
+      a.Program each drone with a unique search pattern to ensure full coverage of the search area.
+      b.Implement collision avoidance algorithms to prevent drones from colliding with each other.
+
+3. Sensor Integration and Object Detection
+   i.LIDAR Sensor Setup: 
+     a.Install LIDAR sensors on each drone to detect objects and measure their dimensions.
+     b.Program the flight controller to stop and measure objects when the LIDAR detects a height of 15cm.
+
+   ii.Color Sensor Configuration:
+      a.Integrate color sensors to identify the target object based on the predefined color (green).
+      b.Program the flight controller to verify the object's color after confirming its dimensions.
+
+4. Autonomous Flight and Target Identification
+  i.Autonomous Navigation:
+    a.Implement algorithms for autonomous takeoff, navigation, and landing.
+    b.Use GPS and onboard sensors for precise navigation and location tracking.
+ 
+  ii.Object Identification:
+     a.Program the drone to measure the detected object's dimensions and verify its color.
+     b.If the object matches the target specifications (15cm x 15cm x 15cm and green color), trigger the communication protocol to inform other drones.
+
+5. Open Field Test Flight
+   i.Remote Initialization:
+     a.Conduct initial tests using remote control to verify the system's functionality.
+     b.Ensure that each drone follows its programmed search pattern and correctly identifies targets.
+
+   ii.Field Testing:
+      a.Perform open field test flights to evaluate the drones' performance in real-world conditions.
+      b.Monitor the drones' autonomous operation, target identification accuracy, and swarm communication effectiveness.
+
+Summary
+The UAV drone system is designed to operate autonomously using a flight controller. Swarm technology facilitates communication between drones, ensuring efficient and coordinated searches. The open field test flight is initiated through remote control to validate the system's functionality. The comprehensive integration of advanced sensors, autonomous navigation, and real-time communication equips the UAVs to perform complex search and target identification tasks efficiently.
