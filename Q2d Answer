@@ -1,0 +1,85 @@
+Autonomous Drone Search and Target Identification System
+System Overview
+The system consists of three autonomous drones designed to search for a specific target within a designated area. Each drone is equipped with a LIDAR sensor for object detection and measurement, and a color sensor for target identification. The drones communicate with each other using swarm technology to coordinate their actions and ensure efficient and collision-free operation.
+
+1.Functionality and Operation
+  i.Initialization and Takeoff
+    a.Drones power on and perform self-checks.
+    b.Autonomous takeoff to a predetermined altitude.
+
+  ii.Search Pattern and Navigation
+     a.Each drone follows a unique, pre-programmed search pattern to cover the entire search area without overlap.
+     b.Drones continuously scan for objects using their LIDAR sensors.
+
+  iii.Object Detection and Measurement
+      a.When a drone detects an object with a height of 15cm, it pauses to measure the other two dimensions (width and length). 
+      b.The drone uses the LIDAR sensor to verify if the dimensions are 15cm x 15cm x 15cm.
+
+  iv.Color Detection
+     a.If the dimensions match, the drone uses its color sensor to check the object's color.
+     b.The target color is predefined as green.
+
+   v.Target Identification and Communication
+     a.If the object is green, the drone identifies it as the target.
+     b.The drone immediately sends the target's location and identification information to the other two drones using swarm technology.
+     c.Upon receiving the target information, the other drones stop their search and return to a standby or home position.
+
+   vi.Autonomous Landing
+      a.All drones perform an autonomous landing sequence after the target is identified and communicated.
+
+2.Block Diagram
+  The block diagram below illustrates the functional flow of the system:
+  i.Initialization
+    a.Power On
+    b.System Check
+    c.Autonomous Takeoff
+
+  ii.Search and Detection
+     a.Execute Search Pattern
+     b.LIDAR Scan for Object Height
+     c.If Object Height is 15cm: 
+         Measure Object Dimensions
+         If Dimensions are 15cm x 15cm x 15cm:
+            Use Color Sensor to Detect Color
+            If Color is Green:
+               Identify Target
+               Communicate Target Information to Other Drones
+               Other Drones Stop Search 
+            Else:
+               Continue Search Pattern
+            Else:
+               Continue Search Pattern
+
+   iii.Completion
+       a.Autonomous Landing Sequence
+
+3.Detailed Workflow
+  i.Initialization and Takeoff
+    a.Step 1: The drones are powered on, and system checks are performed to ensure all sensors and communication modules are functioning correctly.
+    b.Step 2: Each drone takes off autonomously to a predetermined altitude where it begins its search pattern.
+
+  ii.Search Pattern and Navigation
+     a.Step 3: Drones navigate according to their pre-programmed search patterns, which are designed to cover the entire search area without overlap.
+     b.Step 4: Drones continuously scan the ground for objects using their LIDAR sensors.
+
+  iii.Object Detection and Measurement
+      a.Step 5: Upon detecting an object with a height of 15cm, the drone pauses its flight and uses the LIDAR sensor to measure the width and length of the object.
+      b.Step 6: If the object's dimensions are confirmed to be 15cm x 15cm x 15cm, the drone proceeds to the next step.
+
+  iv.Color Detection
+     a.Step 7: The drone uses its color sensor to analyze the color of the object.
+     b.Step 8: If the color is green, the object is identified as the target. If not, the drone resumes its search pattern.
+
+  v.Target Identification and Communication
+    a.Step 9: When the target is identified, the drone sends the location and identification information to the other two drones using swarm communication protocols.
+    b.Step 10: The other drones, upon receiving the target information, stop their search and navigate to a standby or home position.
+
+   vi.Autonomous Landing
+      a.Step 11: After successfully identifying and communicating the target, all drones perform an autonomous landing sequence, completing the mission.
+
+4.System Benefits and Applications
+  i.Efficiency: The autonomous operation and coordinated search patterns ensure thorough coverage of the search area in minimal time.
+  ii.Reliability: Swarm communication and collision prevention mechanisms enhance the system's reliability.
+  iii.Versatility: The system can be adapted for various applications, including search and rescue, surveillance, and environmental monitoring.
+
+By implementing this autonomous drone system with LIDAR and color sensors, efficient and accurate target detection in complex environments can be achieved, significantly enhancing operational capabilities across various fields.
